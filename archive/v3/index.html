@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Smooth Scroll</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- stylesheets -->
+		<link rel="stylesheet" type="text/css" href="css/kraken.css">
+
+		<!-- HTML5 Shim for IE 6-8 -->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body id="top">
+	<section class="space-bottom bg">
+		<article class="container text-center">
+
+					<h1 class="text-taller no-space-bottom"><i class="icon-logo"></i> Smooth Scroll</h1>
+					<p class="text-tall text-muted">A lightweight script to animate scrolling to anchor links.</p>
+
+					<p><a class="btn btn-blue btn-xlarge" href="https://github.com/cferdinandi/smooth-scroll/archive/master.zip">Download Smooth Scroll 3</a></p>
+
+					<p>
+						<span class="text-small">
+							<a href="https://github.com/cferdinandi/smooth-scroll"><i class="icon-github"></i> GitHub Project</a>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<a data-scroll href="#get-started"><i class="icon-docs"></i> Getting Started</a>
+						</span>
+					</p>
+
+		</article>
+	</section>
+
+	<section>
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+					<h1>Animate Anchor Scrolling</h1>
+
+					<p>Smooth Scroll is a lightweight script for animating the scrolling of anchor links. It includes multiple easing options for smoother animations.</p>
+
+					<p><a data-scroll data-speed="1000" href="#bazinga">Anchor Link</a></p>
+
+					<p>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.</p>
+
+					<p id="bazinga">Bazinga!</p>
+
+					<p><a data-scroll data-easing="easeOutQuad" href="#top">Scroll to the top</a></p>
+
+					<hr>
+
+				</div>
+			</div>
+
+		</article>
+	</section>
+
+
+	<section>
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+
+					<h1 id="get-started">Getting Started</h1>
+
+
+					<h2 class="text-left">1. Include Smooth Scroll on your site.</h2>
+
+					<pre><code class="language-markup">&lt;script src="smooth-scroll.js"&gt;&lt;/script&gt;</code></pre>
+
+					<p class="text-muted"><span class="text-small"><span class="label">Heads Up!</span> Make sure to put your JS file in the footer or Smooth Scroll won't work (it's better for performance, too).</span></p>
+
+
+					<h2 class="text-left">2. Add the markup to your HTML.</h2>
+
+					<p>Turn anchor links into Smooth Scroll links by adding the <code>data-scroll</code> data attribute. Give the anchor location an ID just like you normally would.</p>
+
+<pre><code class="language-markup">&lt;a data-scroll data-speed="500" data-easing="easeInOutCubic" data-url="false" href="#bazinga"&gt;Anchor Link&lt;/a&gt;
+...
+&lt;span id="bazinga"&gt;Bazinga!&lt;/span&gt;</code></pre>
+
+					<h3 class="text-left"><span class="label">New</span> Fixed Headers</h3>
+
+					<p>Add a <code>data-scroll-header</code> data attribute to fixed headers. Smooth Scroll will automatically offset scroll distances by the header height. If you have multiple fixed headers, add <code>data-scroll-header</code> to the last one in the markup.</p>
+
+					<pre>&lt;nav class="scroll-header"&gt;
+	...
+&lt;/nav&gt;</pre>
+
+					<h3 class="text-left"><span class="label">New</span> Updating URLs</h3>
+
+					<p>Use the optional <code>data-url</code> attribute to upate the URL with an anchor link. It accepts <code>true</code> and <code>false</code> values, and defaults to <code>false</code> if you don't specify.</p>
+
+					<h3 class="text-left"><span class="label">New</span> Easing with Ease</h3>
+
+					<p>Use optional <code>data-speed</code> and <code>data-easing</code> attributes to control the speed and easing of your animations. If you don't specify, Smooth Scroll defaults to 500 milliseconds and <code>easeInOutCubic</code> easing.</p>
+
+					<section class="hero hero-condensed">
+						<h3 class="no-space">Easing Options</h3>
+						<p class="text-muted small-space-bottom">You can set both the animation style and the rate of acceleration. Not sure what these names mean? Learn more at <a href="http://easings.net/">easings.net</a>.</p>
+						<div class="row">
+							<div class="grid-half">
+								<div class="row row-start-small">
+									<div class="grid-half">
+										<p class="no-space-bottom"><strong>Linear</strong></p>
+										<ul class="list-unstyled">
+											<li><code>linear</code></li>
+										</ul>
+									</div>
+									<div class="grid-half">
+										<p class="no-space-bottom"><strong>Ease-In</strong></p>
+										<ul class="list-unstyled">
+											<li><code>easeInQuad</code></li>
+											<li><code>easeInCubic</code></li>
+											<li><code>easeInQuart</code></li>
+											<li><code>easeInQuint</code></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="grid-half">
+								<div class="row row-start-small">
+									<div class="grid-half">
+										<p class="no-space-bottom"><strong>Ease-In-Out</strong></p>
+										<ul class="list-unstyled">
+											<li><code>easeInOutQuad</code></li>
+											<li><code>easeInOutCubic</code></li>
+											<li><code>easeInOutQuart</code></li>
+											<li><code>easeInOutQuint</code></li>
+										</ul>
+									</div>
+									<div class="grid-half">
+										<p class="no-space-bottom"><strong>Ease-Out</strong></p>
+										<ul class="list-unstyled">
+											<li><code>easeOutQuad</code></li>
+											<li><code>easeOutCubic</code></li>
+											<li><code>easeOutQuart</code></li>
+											<li><code>easeOutQuint</code></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<hr class="no-space-top space-bottom-small">
+
+						<ul class="list-unstyled space-bottom-small">
+							<li><strong>Linear:</strong> <span class="text-muted">Moves at the same speed from start to finish.</span></li>
+							<li><strong>Ease-In:</strong> <span class="text-muted">Gradually increases in speed.</span></li>
+							<li><strong>Ease-In-Out:</strong> <span class="text-muted">Gradually increases in speed, peaks, and then gradually slows down.</span></li>
+							<li><strong>Ease-Out:</strong> <span class="text-muted">Gradually decreases in speed.</span></li>
+						</ul>
+					</section>
+
+
+					<h2 class="text-left">3. Pat yourself on the back.</h2>
+
+					<p>Seriously, you're done. Nice work! Modify as needed.</p>
+
+					<hr>
+
+				</div>
+			</div>
+
+		</article>
+	</section>
+
+
+	<section class="space-bottom">
+		<article class="container">
+
+			<div class="row">
+				<div class="grid-two-thirds float-center">
+
+					<h1>Browser Compatability</h1>
+
+					<p>Smooth Scroll works in all modern browsers, including IE 9 and above.</p>
+
+					<p>In older browsers, anchor links jump the way they normally would. If you need to smooth scrolling for older browsers, download the <a href="https://github.com/cferdinandi/smooth-scroll/tree/archive-v1">jQuery version of Smooth Scroll on GitHub</a>.</p>
+
+				</div>
+			</div>
+
+		</article>
+	</section>
+
+
+		<footer class="bg">
+			<article class="container">
+
+				<div class="row">
+					<div class="grid-two-thirds float-center">
+
+						<p class="text-small text-muted text-center">Built by <a href="http://gomakethings.com">Chris Ferdinandi</a>. Code contributed by <a href="https://github.com/willemliu">Willem Liu</a>, <a href="https://gist.github.com/gre/1650294">Gaëtan Renaudeau</a>, <a href="https://github.com/robertpateii">Robert Pate</a>, and <a href="https://github.com/a-v-l">Arndt von Lucadou</a>. Free to use under the <a href="http://gomakethings.com/mit/">MIT License</a>.</p>
+
+						<p class="text-small text-muted text-center">Smooth Scroll is an add-on for <a href="http://cferdinandi.github.io/kraken/">Kraken</a>, a lightweight, mobile-first boilerplate for front-end web developers. It works great as a standalone product, too.</p>
+
+					</div>
+				</div>
+
+			</article>
+		</footer>
+
+
+		<!-- Javascript -->
+		<script src="js/smooth-scroll.js"></script>
+		<script src="js/prism.js"></script>
+
+	</body>
+</html>
